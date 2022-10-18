@@ -1,6 +1,6 @@
 /*
   STR03-J: Noncompliant Code
-   - Encodes noncharacter data as a string
+   - Do not encode noncharacter data as a string
 */
 
 
