@@ -1,6 +1,6 @@
 /*
   IDS06-J: Noncompliant Code
-   - Unsanitized user input can leak data or cause a DoS attack in format strings
+   - Exclude unsanitized user input from format strings
 */
 
 class Format {
