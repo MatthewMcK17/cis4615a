@@ -1,5 +1,5 @@
 /*
-  THI03-J: Noncomplain Code
+  THI03-J: Noncomplaint Code
    - Always invoke wait() and await() methods inside a loop
 */
 
