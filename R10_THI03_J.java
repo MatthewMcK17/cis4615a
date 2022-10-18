@@ -1,6 +1,6 @@
 /*
   THI03-J: Noncomplain Code
-   - Always invoke wait() and await() methods inside a loop (can cause DoS)
+   - Always invoke wait() and await() methods inside a loop
 */
 
 synchronized (object) {
