@@ -1,12 +1,15 @@
 /*
-  EXP00-J: Noncompliant Code
-   - Ignores return values by methods
+  EXP00-J: Compliant Code
+   - Handles return values from delete() method
 */
 
-public void deleteFile() {
+
+public void deleteFile(){
  
   File someFile = new File("someFileName.txt");
   // Do something with someFile
-  someFile.delete();
+  if (!someFile.delete()) {
+    // Handle failure to delete the file
+  }
  
 }
