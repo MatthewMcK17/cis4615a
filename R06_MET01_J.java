@@ -1,6 +1,6 @@
 /*
   MET01-J: Noncompliant Code
-   - Uses assertions to validate arguments of public methods (doesn't get called if assertions are disabled)
+   - Never use assertions to validate method arguments
 */
 
 public static int getAbsAdd(int x, int y) {
