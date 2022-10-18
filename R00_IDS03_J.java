@@ -1,6 +1,6 @@
 /* 
   IDS03-J: Noncompliant Code
-   - Vulnerable to log injection
+   - Do not log unsanitized user input
 */
 
 if (loginSuccessful) {
