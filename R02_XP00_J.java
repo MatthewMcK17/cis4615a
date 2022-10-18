@@ -1,6 +1,6 @@
 /*
   EXP00-J: Noncompliant Code
-   - Ignores return values by methods
+   - Do not ignore values returned by methods
 */
 
 public void deleteFile() {
