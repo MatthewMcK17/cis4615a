@@ -1,6 +1,6 @@
 /*
-  SER04-J: Noncompliant Code
-   - Don't allow serialization/unserialization to bypass the security manager
+  SER04-J: Compliant Code
+   - Doesn't allow serialization/unserialization to bypass the security manager
 */
 
 public final class Hometown implements Serializable {
@@ -41,15 +41,19 @@ public final class Hometown implements Serializable {
     }
   }
  
+  // writeObject() correctly enforces checks during serialization
   private void writeObject(ObjectOutputStream out) throws IOException {
+    performSecurityManagerCheck();
     out.writeObject(town);
   }
  
+  // readObject() correctly enforces checks during deserialization
   private void readObject(ObjectInputStream in) throws IOException {
     in.defaultReadObject();
     // If the deserialized name does not match the default value normally
     // created at construction time, duplicate the checks
     if (!UNKNOWN.equals(town)) {
+      performSecurityManagerCheck();
       validateInput(town);
     }
   }
